@@ -1,1 +1,101 @@
-<h1> Hello </h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Holy Grail Layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas:
+                "header header header"
+                "left main right"
+                "footer footer footer";
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: auto 1fr auto;
+            height: 100vh;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        header {
+            grid-area: header;
+            background: #90EE90;
+            border: 2px solid black;
+            text-align: center;
+            padding: 15px;
+            font-weight: bold;
+        }
+
+        .left {
+            grid-area: left;
+            background: #f4b6b6;
+            border: 2px solid black;
+            text-align: center;
+            padding: 20px;
+        }
+
+        main {
+            grid-area: main;
+            background: #66cdaa;
+            border: 2px solid black;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .right {
+            grid-area: right;
+            background: #f4b6b6;
+            border: 2px solid black;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer {
+            grid-area: footer;
+            background: #f7e48c;
+            border: 2px solid black;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+        }
+
+        .logo {
+            position: absolute;
+            right: 20px;
+            bottom: 10px;
+            background: #87ceeb;
+            border: 2px solid black;
+            border-radius: 50%;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>Navbar</header>
+
+    <div class="left">Left</div>
+
+    <main>Main</main>
+
+    <div class="right">Right</div>
+
+    <footer>
+        Footer
+        <div class="logo">Logo</div>
+    </footer>
+</div>
+
+</body>
+</html>
